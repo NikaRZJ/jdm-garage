@@ -1,0 +1,28 @@
+{
+  "name": "jdm-garage",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@12.4.1",
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=12.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "build": "pnpm -r build"
+  },
+  "devDependencies": {
+    "@jdm/config": "workspace:*",
+    "@types/node": "^24.13.4",
+    "eslint": "^10.10.0",
+    "prettier": "^3.9.6",
+    "typescript": "~6.0.3"
+  }
+}

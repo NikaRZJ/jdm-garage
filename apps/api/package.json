@@ -1,0 +1,15 @@
+{
+  "name": "@jdm/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "API jdm-garage (NestJS появится на задаче 0.7)",
+  "main": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@jdm/config": "workspace:*",
+    "typescript": "~6.0.3"
+  }
+}

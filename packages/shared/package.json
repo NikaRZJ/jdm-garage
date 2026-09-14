@@ -1,0 +1,15 @@
+{
+  "name": "@jdm/shared",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Общие zod-схемы, типы и константы",
+  "main": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@jdm/config": "workspace:*",
+    "typescript": "~6.0.3"
+  }
+}
