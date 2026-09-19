@@ -9,15 +9,15 @@
 ## Стек и версии (проверены 14.09.2026, подробности — `docs/stack-versions-2026-09-14.md` в папке документов)
 
 - Node 24 LTS, pnpm 12 (поле `packageManager` в корневом `package.json`), TypeScript `~6.0.x` — **не 7.x** (у 7.0 нет compiler API: ломаются `nest build` и Swagger-плагин), ESM во всех пакетах.
-- `apps/api`: NestJS 12 (Express 5), zod 4 через Standard Schema (`@Body({ schema })`, глобальный `StandardSchemaValidationPipe`), `@nestjs/swagger` 12 + `zod-openapi`, Drizzle ORM 0.45 + drizzle-kit, PostgreSQL 18 + pgvector 0.8, pino (`nestjs-pino`), `jose` + `argon2`, `@aws-sdk/client-s3` → Garage, `sharp`, `@nestjs/schedule`.
+- `apps/api`: NestJS 12 (Express 5), zod 4 через Standard Schema (`@Body({ schema })`, глобальный `StandardSchemaValidationPipe`), `@nestjs/swagger` 12 + `zod-openapi`, Drizzle ORM 0.45 + drizzle-kit, PostgreSQL 18 + pgvector 0.8, pino (`nestjs-pino`), `jose` + `argon2`, `@aws-sdk/client-s3` → RustFS, `sharp`, `@nestjs/schedule`.
 - `apps/web`: React 19, Vite 8, TanStack Router (файловые маршруты, `validateSearch` через zod) + TanStack Query v5, MUI 9 с одной светлой темой, Material React Table для админки (совместимость с MUI 9 проверяется на этапе 2; запасной вариант — `@mui/x-data-grid`), react-hook-form + `@hookform/resolvers`; клиент API генерируется orval 8 из OpenAPI — руками не пишется.
 - `packages/shared`: zod-схемы (фильтры, DTO, перечисления, статусы), сид справочника. `packages/config`: `tsconfig.base.json`, ESLint flat config, Prettier.
 - Тесты: Vitest, Testing Library, MSW; интеграционные тесты API — `@nestjs/testing` + supertest + Testcontainers с реальным PostgreSQL (моки базы запрещены); e2e — Playwright.
-- Не добавлять: `nestjs-zod`, Prisma, Passport-стратегии для JWT (auth пишется на `jose` осознанно), Redis/BullMQ (очередь — таблица в PostgreSQL с `FOR UPDATE SKIP LOCKED`), MinIO (заменён на Garage), Tailwind. Новые зависимости — только по явной просьбе.
+- Не добавлять: `nestjs-zod`, Prisma, Passport-стратегии для JWT (auth пишется на `jose` осознанно), Redis/BullMQ (очередь — таблица в PostgreSQL с `FOR UPDATE SKIP LOCKED`), MinIO (репозиторий архивирован; заменён на RustFS), Tailwind. Новые зависимости — только по явной просьбе.
 
 ## Команды
 
-`pnpm install` · `pnpm dev` (api + web) · `pnpm lint` · `pnpm typecheck` · `pnpm test` (unit) · `pnpm test:int` (интеграционные, Testcontainers) · `pnpm e2e` · `pnpm db:generate` / `pnpm db:migrate` / `pnpm db:seed` · `pnpm api:generate` (OpenAPI → клиент) · `docker compose up -d` (PostgreSQL + pgvector, Garage).
+`pnpm install` · `pnpm dev` (api + web) · `pnpm lint` · `pnpm typecheck` · `pnpm test` (unit) · `pnpm test:int` (интеграционные, Testcontainers) · `pnpm e2e` · `pnpm db:generate` / `pnpm db:migrate` / `pnpm db:seed` · `pnpm api:generate` (OpenAPI → клиент) · `docker compose up -d` (PostgreSQL + pgvector, RustFS).
 
 ## Правила
 
