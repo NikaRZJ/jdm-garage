@@ -1,8 +1,15 @@
 {
   "extends": "@jdm/config/tsconfig.base.json",
   "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "resolvePackageJsonExports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist",
+    "incremental": true
   },
   "include": ["src"]
 }
