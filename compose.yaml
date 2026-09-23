@@ -17,17 +17,17 @@ services:
       start_period: 10s
   storage:
     image: rustfs/rustfs:1.0.0
-    environment: 
+    environment:
       - RUSTFS_ACCESS_KEY=${RUSTFS_ACCESS_KEY}
       - RUSTFS_SECRET_KEY=${RUSTFS_SECRET_KEY:?переменная не задана}
-    ports: 
+    ports:
       - 127.0.0.1:9000:9000
       - 127.0.0.1:9001:9001
     volumes:
       - storage-data:/data
       - storage-logs:/logs
     healthcheck:
-      test: ["CMD-SHELL", "curl -sS -o /dev/null http://127.0.0.1:9000/"]
+      test: ['CMD-SHELL', 'curl -sS -o /dev/null http://127.0.0.1:9000/']
       interval: 10s
       timeout: 3s
       retries: 5

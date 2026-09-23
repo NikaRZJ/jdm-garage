@@ -7,9 +7,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": true,
-    "rootDir": "src",
     "outDir": "dist",
     "incremental": true
   },
-  "include": ["src"]
+  "include": ["src", "drizzle.config.ts"]
 }

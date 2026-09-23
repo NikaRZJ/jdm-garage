@@ -17,7 +17,9 @@
     "format:check": "prettier --check .",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
-    "build": "pnpm -r build"
+    "build": "pnpm -r build",
+    "db:generate": "pnpm --filter @jdm/api db:generate",
+    "db:migrate": "pnpm --filter @jdm/api db:migrate"
   },
   "devDependencies": {
     "@jdm/config": "workspace:*",
