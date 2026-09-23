@@ -1,10 +1,20 @@
 import { Global, Inject, Module } from '@nestjs/common'
 import type { OnApplicationShutdown } from '@nestjs/common'
+import { drizzle } from 'drizzle-orm/node-postgres'
+import type { NodePgDatabase } from 'drizzle-orm/node-postgres'
 import { Pool } from 'pg'
 import { APP_CONFIG } from '../config/env.js'
 import type { AppConfig } from '../config/env.js'
+import * as schema from '../schema.js'
 
 export const PG_POOL = Symbol('PG_POOL')
+export const DRIZZLE = Symbol('DRIZZLE')
+
+/**
+ * Объект Drizzle со всей схемой проекта — через него сервисы делают запросы.
+ * Это псевдоним типа, а не класс, поэтому внедряется только по токену: `@Inject(DRIZZLE)`.
+ */
+export type Database = NodePgDatabase<typeof schema> & { $client: Pool }
 
 @Global()
 @Module({
@@ -25,8 +35,14 @@ export const PG_POOL = Symbol('PG_POOL')
           application_name: 'jdm-garage-api',
         }),
     },
+    {
+      provide: DRIZZLE,
+      inject: [PG_POOL],
+      // Своих соединений Drizzle не открывает — работает поверх того же пула.
+      useFactory: (pool: Pool): Database => drizzle({ client: pool, schema }),
+    },
   ],
-  exports: [PG_POOL],
+  exports: [PG_POOL, DRIZZLE],
 })
 export class DatabaseModule implements OnApplicationShutdown {
   constructor(@Inject(PG_POOL) private readonly pool: Pool) {}
