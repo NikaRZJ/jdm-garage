@@ -1,0 +1,43 @@
+name: CI
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: забрать код
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: поставить pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: поставить Node
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: установка зависимостей
+        run: pnpm install --frozen-lockfile
+
+      - name: линтинг
+        run: pnpm lint
+
+      - name: форматирование
+        run: pnpm format:check
+
+      - name: проверка типов
+        run: pnpm typecheck
+
+      - name: прогон тестов
+        run: pnpm test
+
+      - name: сборка
+        run: pnpm build
