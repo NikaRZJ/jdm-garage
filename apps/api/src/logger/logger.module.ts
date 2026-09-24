@@ -32,7 +32,7 @@ import type { AppConfig } from '../config/env.js'
             res: (res: ServerResponse) => ({ statusCode: res.statusCode }),
           },
           // Проверку живости опрашивает прокси каждые несколько секунд — в логе она лишняя.
-          autoLogging: { ignore: (req: IncomingMessage) => req.url === '/health' },
+          autoLogging: { ignore: (req: IncomingMessage) => req.url === '/api/health' },
           redact: {
             paths: ['req.headers.authorization', 'req.headers.cookie', 'res.headers["set-cookie"]'],
             censor: '[скрыто]',

@@ -12,6 +12,8 @@ const app = await NestFactory.create<NestExpressApplication>(AppModule, {
 })
 
 app.useLogger(app.get(Logger))
+// Всё API живёт под /api: так фронт и API делят один адрес, а прокси различает их по пути.
+app.setGlobalPrefix('api')
 // Версию фреймворка наружу не сообщаем.
 app.getHttpAdapter().getInstance().disable('x-powered-by')
 app.enableShutdownHooks()
