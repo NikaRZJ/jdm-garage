@@ -17,7 +17,9 @@
 
 ## Команды
 
-`pnpm install` · `pnpm dev` (api + web) · `pnpm lint` · `pnpm typecheck` · `pnpm test` (unit) · `pnpm test:int` (интеграционные, Testcontainers) · `pnpm e2e` · `pnpm db:generate` / `pnpm db:migrate` / `pnpm db:seed` · `pnpm api:generate` (OpenAPI → клиент) · `docker compose up -d` (PostgreSQL + pgvector, RustFS).
+`pnpm install` · `pnpm dev` (api + web) · `pnpm lint` · `pnpm format` / `pnpm format:check` · `pnpm typecheck` · `pnpm test` (unit) · `pnpm build` · `pnpm test:int` (интеграционные, Testcontainers) · `pnpm e2e` · `pnpm db:generate` / `pnpm db:migrate` / `pnpm db:seed` · `pnpm api:generate` (OpenAPI → клиент) · `docker compose up -d` (PostgreSQL + pgvector, RustFS).
+
+CI (`.github/workflows/ci.yml`) на каждый pull request в `master` запускает `lint`, `format:check`, `typecheck`, `test`, `build` — перед push прогоняй их локально.
 
 ## Правила
 
@@ -27,7 +29,7 @@
 4. **Безопасность.** Любой код про auth, файлы, SQL, LLM — сначала чек-лист PRD §8: argon2id; access-токен в памяти, refresh в httpOnly-cookie с ротацией и семьями токенов; CSRF-защита refresh (`Origin`/`Sec-Fetch-Site` + кастомный заголовок); ни `password_hash`, ни `token_hash` в ответах; только параметризованный SQL; тип файла по содержимому, перекодирование изображений; текст пользователя в промпте — только как данные.
 5. **Терминология.** Машина = `Listing`, заявка = `Inquiry`, бронь = `Reservation`, справочник = `reference` (`Make`, `Model`, `Engine`), каталог = публичный список. Статусы — как в PRD §6.3: машина `draft / published / reserved / sold / archived`, бронь `active / expired / cancelled / completed`, заявка `new / in_progress / won / lost / spam`; переход вне таблицы — 409.
 6. **Объём.** Пункт, который не ломает сценарий MVP и не кормит учебную цель, уходит в следующую версию. Не расширяй задачу без спроса, не добавляй «полезное рядом».
-7. **Коммиты и PR.** Conventional Commits (`feat`, `fix`, `chore`, `docs`, `test`, `refactor`); одна задача — один PR с коротким «что и почему»; красный CI не сливается.
+7. **Коммиты, ветки и PR.** Conventional Commits (`feat`, `fix`, `chore`, `docs`, `test`, `refactor`, `ci`); ветка называется по типу — `feat/…`, `docs/…`, `ci/…`. В `master` — только через pull request: правило на GitHub отклоняет прямой push и слияние без зелёной проверки `check`. Одна задача — один PR с коротким «что и почему»; слияние — squash, поэтому заголовок PR пишется как сообщение коммита по Conventional Commits.
 8. **Язык.** Документация, ADR, комментарии, тексты интерфейса — по-русски; код и идентификаторы — по-английски. Англицизмы в текстах только там, где нет нормального русского термина.
 
 ## Структура
