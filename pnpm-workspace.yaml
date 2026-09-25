@@ -4,5 +4,3 @@ packages:
 allowBuilds:
   esbuild: true
   msw: false
-minimumReleaseAgeExclude:
-  - '@tanstack/react-router@1.170.39'
