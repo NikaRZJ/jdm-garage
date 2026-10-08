@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 
 # Claude Code — локальные разрешения инструментов
 .claude/settings.local.json
+
+# macOS — служебные файлы Finder
+.DS_Store
