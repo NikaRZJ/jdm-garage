@@ -1,0 +1,362 @@
+[
+  {
+    "model": "nissan-skyline-gtr-r32",
+    "code": "RB26DETT",
+    "displacementCc": 2568,
+    "powerHp": 280,
+    "aspiration": "twin_turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-skyline-gtr-r33",
+    "code": "RB26DETT",
+    "displacementCc": 2568,
+    "powerHp": 280,
+    "aspiration": "twin_turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-skyline-gtr-r34",
+    "code": "RB26DETT",
+    "displacementCc": 2568,
+    "powerHp": 280,
+    "aspiration": "twin_turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-silvia-s13",
+    "code": "SR20DET",
+    "displacementCc": 1998,
+    "powerHp": 205,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-silvia-s13",
+    "code": "SR20DE",
+    "displacementCc": 1998,
+    "powerHp": 140,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-silvia-s14",
+    "code": "SR20DET",
+    "displacementCc": 1998,
+    "powerHp": 220,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-silvia-s14",
+    "code": "SR20DE",
+    "displacementCc": 1998,
+    "powerHp": 160,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-silvia-s15",
+    "code": "SR20DET",
+    "displacementCc": 1998,
+    "powerHp": 250,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-silvia-s15",
+    "code": "SR20DE",
+    "displacementCc": 1998,
+    "powerHp": 165,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-180sx",
+    "code": "SR20DET",
+    "displacementCc": 1998,
+    "powerHp": 205,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-180sx",
+    "code": "SR20DE",
+    "displacementCc": 1998,
+    "powerHp": 140,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-cefiro-a31",
+    "code": "RB20DET",
+    "displacementCc": 1998,
+    "powerHp": 205,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "nissan-cefiro-a31",
+    "code": "RB20DE",
+    "displacementCc": 1998,
+    "powerHp": 125,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "toyota-supra-a80",
+    "code": "2JZ-GTE",
+    "displacementCc": 2997,
+    "powerHp": 280,
+    "aspiration": "twin_turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "toyota-supra-a80",
+    "code": "2JZ-GE",
+    "displacementCc": 2997,
+    "powerHp": 225,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "toyota-chaser-jzx100",
+    "code": "1JZ-GTE",
+    "displacementCc": 2491,
+    "powerHp": 280,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "toyota-chaser-jzx100",
+    "code": "1G-FE",
+    "displacementCc": 1988,
+    "powerHp": 140,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "toyota-ae86-trueno-levin",
+    "code": "4A-GE",
+    "displacementCc": 1587,
+    "powerHp": 130,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "toyota-mr2-sw20",
+    "code": "3S-GTE",
+    "displacementCc": 1998,
+    "powerHp": 225,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "toyota-mr2-sw20",
+    "code": "3S-GE",
+    "displacementCc": 1998,
+    "powerHp": 165,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "toyota-mrs-zzw30",
+    "code": "1ZZ-FE",
+    "displacementCc": 1794,
+    "powerHp": 140,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "mazda-rx7-fd",
+    "code": "13B-REW",
+    "displacementCc": 1308,
+    "powerHp": 255,
+    "aspiration": "twin_turbo",
+    "fuel": "petrol",
+    "isRotary": true
+  },
+  {
+    "model": "mazda-rx7-fc",
+    "code": "13B-DEI",
+    "displacementCc": 1308,
+    "powerHp": 146,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": true
+  },
+  {
+    "model": "mazda-rx7-fc",
+    "code": "13B-T",
+    "displacementCc": 1308,
+    "powerHp": 185,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": true
+  },
+  {
+    "model": "mazda-roadster-na",
+    "code": "B6-ZE",
+    "displacementCc": 1597,
+    "powerHp": 120,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "mazda-roadster-na",
+    "code": "BP-ZE",
+    "displacementCc": 1839,
+    "powerHp": 130,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "mazda-roadster-nb",
+    "code": "B6-ZE",
+    "displacementCc": 1597,
+    "powerHp": 125,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "mazda-roadster-nb",
+    "code": "BP-ZE",
+    "displacementCc": 1839,
+    "powerHp": 145,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "mazda-roadster-nb",
+    "code": "BP-VE",
+    "displacementCc": 1839,
+    "powerHp": 160,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "honda-nsx-na1-na2",
+    "code": "C30A",
+    "displacementCc": 2977,
+    "powerHp": 280,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "honda-nsx-na1-na2",
+    "code": "C32B",
+    "displacementCc": 3179,
+    "powerHp": 280,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "honda-s2000-ap1-ap2",
+    "code": "F20C",
+    "displacementCc": 1997,
+    "powerHp": 250,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "honda-s2000-ap1-ap2",
+    "code": "F22C1",
+    "displacementCc": 2156,
+    "powerHp": 242,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "honda-beat-pp1",
+    "code": "E07A",
+    "displacementCc": 656,
+    "powerHp": 64,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "subaru-impreza-wrx-sti-gc8",
+    "code": "EJ20G",
+    "displacementCc": 1994,
+    "powerHp": 240,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "subaru-impreza-wrx-sti-gc8",
+    "code": "EJ20K",
+    "displacementCc": 1994,
+    "powerHp": 280,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "subaru-impreza-wrx-sti-gdb",
+    "code": "EJ207",
+    "displacementCc": 1994,
+    "powerHp": 280,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "mitsubishi-lancer-evo-4-6",
+    "code": "4G63T",
+    "displacementCc": 1997,
+    "powerHp": 280,
+    "aspiration": "turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "mitsubishi-gto-3000gt",
+    "code": "6G72TT",
+    "displacementCc": 2972,
+    "powerHp": 280,
+    "aspiration": "twin_turbo",
+    "fuel": "petrol",
+    "isRotary": false
+  },
+  {
+    "model": "mitsubishi-gto-3000gt",
+    "code": "6G72",
+    "displacementCc": 2972,
+    "powerHp": 225,
+    "aspiration": "na",
+    "fuel": "petrol",
+    "isRotary": false
+  }
+]

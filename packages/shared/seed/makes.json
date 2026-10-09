@@ -1,0 +1,8 @@
+[
+  { "slug": "nissan", "name": "Nissan" },
+  { "slug": "toyota", "name": "Toyota" },
+  { "slug": "mazda", "name": "Mazda" },
+  { "slug": "honda", "name": "Honda" },
+  { "slug": "subaru", "name": "Subaru" },
+  { "slug": "mitsubishi", "name": "Mitsubishi" }
+]
