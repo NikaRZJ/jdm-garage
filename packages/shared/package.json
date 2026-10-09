@@ -6,10 +6,16 @@
   "description": "Общие zod-схемы, типы и константы",
   "main": "./src/index.ts",
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "4.6.5"
   },
   "devDependencies": {
     "@jdm/config": "workspace:*",
-    "typescript": "~6.0.3"
+    "@types/node": "24.13.4",
+    "typescript": "~6.0.3",
+    "vitest": "5.0.1"
   }
 }
